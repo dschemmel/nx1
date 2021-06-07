@@ -1,7 +1,12 @@
-<h1>Todos</h1>
+<h1 class='m-5 p-10 text-red-900 shadow-md rounded hover:bg-red-200'>Todos</h1>
 
 <ul>
-  <li *ngFor="let t of todos" class="todo">{{ t.title }}</li>
+  <li *ngFor='let t of todos' class='todo'>{{ t.title }}</li>
 </ul>
 
-<button id="add-todo" (click)="addTodo()">Add Todo</button>
+<button
+  id='add-todo'
+  (click)='addTodo()'
+  class='bg-gradient-to-b from-blue-800 to-green-500 p-2 rounded-full text-white m-5 px-5'
+>Add Todo
+</button>
