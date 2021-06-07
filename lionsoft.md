@@ -6,3 +6,7 @@
   - Workspace-name: lionsoft
   - Application: login
   - führt zu 'initial commit'
+
+* nx-Tutorial bis Step 3
+  - Todos inkl. e2e (nur App, no libs, no api)
+  - führt zu 'todos mit cypress e2e'
