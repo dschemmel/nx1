@@ -1,20 +1,27 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
-interface Todo {
-  title: string;
-}
+import { Todo } from '@lionsoft/data';
 
 @Component({
-  selector: 'lionsoft-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+	selector: 'lionsoft-root',
+	templateUrl: './app.component.html',
+	styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  todos: Todo[] = [{ title: 'Todo 1' }, { title: 'Todo 2' }];
+	todos: Todo[] = [];
 
-  addTodo() {
-    this.todos.push({
-      title: `New todo ${Math.floor(Math.random() * 1000)}`,
-    });
-  }
+	constructor(private http: HttpClient) {
+		this.fetch();
+	}
+
+	fetch() {
+		this.http.get<Todo[]>('/api/todos').subscribe((t) => (this.todos = t));
+	}
+
+	addTodo() {
+		this.http.post('/api/addTodo', {}).subscribe(() => {
+			this.fetch();
+		});
+	}
 }

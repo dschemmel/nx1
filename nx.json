@@ -1,30 +1,36 @@
 {
-  "implicitDependencies": {
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
-    ".eslintrc.json": "*"
-  },
-  "affected": {
-    "defaultBase": "master"
-  },
-  "npmScope": "lionsoft",
-  "tasksRunnerOptions": {
-    "default": {
-      "runner": "@nrwl/workspace/tasks-runners/default",
-      "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
-      }
-    }
-  },
-  "projects": {
-    "login": {
-      "tags": []
-    },
-    "login-e2e": {
-      "tags": [],
-      "implicitDependencies": ["login"]
-    }
-  }
+	"implicitDependencies": {
+		"package.json": {
+			"dependencies": "*",
+			"devDependencies": "*"
+		},
+		".eslintrc.json": "*"
+	},
+	"affected": {
+		"defaultBase": "master"
+	},
+	"npmScope": "lionsoft",
+	"tasksRunnerOptions": {
+		"default": {
+			"runner": "@nrwl/workspace/tasks-runners/default",
+			"options": {
+				"cacheableOperations": ["build", "lint", "test", "e2e"]
+			}
+		}
+	},
+	"projects": {
+		"login": {
+			"tags": []
+		},
+		"login-e2e": {
+			"tags": [],
+			"implicitDependencies": ["login"]
+		},
+		"nest-api": {
+			"tags": []
+		},
+		"data": {
+			"tags": []
+		}
+	}
 }
