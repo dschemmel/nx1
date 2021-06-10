@@ -15,7 +15,8 @@
 		"skipDefaultLibCheck": true,
 		"baseUrl": ".",
 		"paths": {
-			"@lionsoft/data": ["libs/data/src/index.ts"]
+			"@lionsoft/data": ["libs/data/src/index.ts"],
+			"@lionsoft/ui": ["libs/ui/src/index.ts"]
 		}
 	},
 	"exclude": ["node_modules", "tmp"]

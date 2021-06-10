@@ -1,8 +1,6 @@
 <h1 class="m-5 p-10 text-red-900 shadow-md rounded hover:bg-red-200">Todos</h1>
 
-<ul>
-	<li *ngFor="let t of todos" class="todo">{{ t.title }}</li>
-</ul>
+<lionsoft-todos [todos]="todos"></lionsoft-todos>
 
 <button
 	id="add-todo"
